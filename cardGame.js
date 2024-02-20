@@ -52,11 +52,11 @@ const game = () => {
       (userBet === "menor" && flipCard.value < showCard.value)
     ) {
       alert("Has ganado!");
-      score += 1;
+      score++;
     } else {
       alert("Has perdido!");
     }
-    rounds += 1;
+    rounds++;
     continuePlaying = confirm("¿Quieres continuar jugando?");
   }
   if (rounds >= 10) {

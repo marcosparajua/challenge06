@@ -3,6 +3,7 @@ const suits = ["diamonds", "hearts", "clovers", "spades"];
 const cards = [2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King", "Ace"];
 
 const getRandomValue = () => {
+  const numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
   return numbers[Math.floor(Math.random() * numbers.length)];
 };
 
@@ -13,7 +14,7 @@ const getRandomSuit = () => {
 const getRandomCard = () => {
   let value = getRandomValue();
   let suit = getRandomSuit();
-  let currentCard = { value: value, suit: suit };
+  let currentCard = { value, suit };
   if (currentCard.value < 11) {
     currentCard.face = currentCard.value;
   } else if (currentCard.value === 11) {
